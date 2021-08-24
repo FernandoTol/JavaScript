@@ -17,15 +17,17 @@ let biblioteca = [
 
 ]
 
-const libros = biblioteca.map(function (bar) {
-    return "Nombre del libro:" + bar.Nombre_del_libro + '' + '<br>' + 'Nombre del Autor:' + bar.Nombre_del_autor + '' + '<br>' + '<br>'
-});
-document.getElementById("libros").innerHTML = libros;
-
-
 const valores = () =>{
     let inpuLibro = document.getElementById('NomLibro').value;
     console.log(inpuLibro)
     biblioteca.push({Nobre_del_libro: `${inpuLibro}` })
     console.log(biblioteca)
 }
+
+const libros = biblioteca.map(function (bar) {
+    return "Nombre del libro:" + bar.Nombre_del_libro + '' + '<br>' + 'Nombre del Autor:' + bar.Nombre_del_autor + '' + '<br>' + '<br>'
+});
+document.getElementById("libros").innerHTML = libros;
+
+
+
